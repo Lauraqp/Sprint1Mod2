@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+//VARIABLES
+$font-body: 'Roboto';
+$nav-color: #ededed;
+$search-color: #f6f6f6;
+$input-color: white;
+$font-color:black;
+$messages-color:#e1f7cb;
+$container-day:#e5f2fa;
+$chat-color:#ffffff;
+$font-size:16px;
+$image-size: 25px;
+$font-size-body:16px;
+
+
+//partials o modules
+@import 'universal';
+@import 'login';
+
+//FUNCTIONS
+
+
+//mixins
+@mixin images($i) {
+    border-radius: $i*10px;
+    width: 80px;
+    margin-left: 1vw;
+    
+}
+@mixin paddings($t) {
+    padding: $t*1px $t*4px;
+}
+
+@mixin button($t,$input-color) {
+   border: none;
+   outline: none;
+   background-color: $search-color;
+}
+
+body{
+    max-width: 100%;
+}
+
+.main{
+    display: flex;
+    
+
+    &__aside{
+        display: flex;
+        flex-direction: column;
+        min-width: 50vh;
+        min-height: 100vh;
+    }
+
+    &__image{
+        @include images(5);
+    }
+    &__figure{
+        background-color: $nav-color;
+        min-height: 6vw;
+        display: flex;
+        align-items: center;
+    }
+    &__searchs{
+        min-height: 10%;
+        display: flex;
+        align-items: center;
+        background-color: $search-color;
+       
+    }
+    &__filter{
+        background-color: $input-color;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        margin-left: 1vw;
+        
+    }
+    &__input{
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        width: 80%;
+        height: 70%;
+        font-size: 1vw;
+    }
+    &__icon{
+        width: 25px;
+        height: 25px;
+        margin: 0 15px;
+       
+    }
+    &__btnCloseSession{
+        width: 10vh;
+        height: 5vh;
+        border: none;
+        background-color: $messages-color;
+        
+    }
+    &__button{
+        border: none;
+        outline: none;
+        margin-left: 10px;
+        height: 70%;
+        background-color: $input-color;
+    }
+    &__messages{
+        background-color: $chat-color;
+        display: flex;
+        flex-direction: column;
+    }
+    &__chats{
+        border: 1px solid $nav-color;
+        min-height: 8vw;
+
+        &:hover{
+            background-color: $nav-color;
+        }
+    }
+    &__imagesChat{
+        @include images(5)
+    }
+    &__section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        visibility: visible;
+        background-image: url(/images/fondo.jpg);
+    }
+    &__headers{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 6vw;
+        @include paddings(1);
+        border-left: 1px solid gray;
+        background-color: $nav-color;
+        
+    }
+    &__principal{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__formIcons{
+        background-color: $nav-color;
+        min-height: 6vw;
+        gap: 1vw;
+        padding: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    &__iconsInput{
+        background-color: $input-color;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        margin-left: 1vw;
+        border: none;
+        outline: none;
+        
+    }
+    &__icons{
+        width: 2vw;
+        border:none;
+        outline: none;
+    }
+    &__buttonIcons{
+        border: none;
+        outline: none;
+    }
+
+}
+
+
+
+@media screen and (max-width:400px){
+    .body{
+        display: flex;
+        
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+
+        &__section{
+            visibility: hidden;
+        }
+        &__image{
+            max-width:10vh;
+        }
+        &__input{
+            font-size: $font-size-body;
+        }
+        &__figure{
+            height: 20vh;
+        }
+        &__filter{
+            height: 5vh;
+        }
+    }
+
+
+}

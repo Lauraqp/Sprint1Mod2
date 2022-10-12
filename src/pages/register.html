@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js" integrity="sha512-26uCxGyoPL1nESYXHQ+KUmm3Maml7MEQNWU8hIt1hJaZa5KQAQ5ehBqK6eydcCOh6YAuZjV3augxu/5tY4fsgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+<body class="body__register">
+   <main class="main__login">
+    <h1>Registrarse</h1>
+    <form id="form__register" class="form">
+        <input type="text" id="name" class="form__name" placeholder="Ingrese su nombre" required>
+        <input type="number" id="cellphone" class="form__cellphone" placeholder="Ingrese su número de celular" required>
+        <input type="password" id="password" class="form__password" placeholder="Ingrese su contraseña">
+        <input type="url"  id="img" class="form__url" required placeholder="Ingrese su foto de perfil">
+        <textarea name="phrase" id="phrase" class="form__phrase" cols="30" rows="10"></textarea>
+        <button type="submit" id="button__register" class="form__button">Registrarse</button>
+        <span class="form__span">Ya tienes una cuenta? <a class="form__link" href="/index.html">Inicia Sesión</a></span>
+    </form>
+   </main>
+
+   <script src="../scripts/register.js" type="module"></script>
+</body>
+</html>

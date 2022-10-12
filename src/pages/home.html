@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    <main class="main">
+            <aside class="main__aside">
+                <figure class="main__figure">
+                    <img class="main__image" src="../../images/juan david.jpg" alt="foto de perfil">
+                </figure>
+                <div class="main__searchs">
+                        <form type="submit" id="form__filter" class="main__filter">
+                            <button class="main__button">
+                                <img class="main__icon" src="../../images/icons/icons/search.svg" alt="">
+                            </button>
+                            <input class="main__input" type="text" placeholder="Buscar o iniciar un nuevo chat">
+                        </form>
+                    </div>
+                    
+                    <section class="main__messages" id="container__messages">
+                           
+
+                    </section>
+                        <form id="closeSession">
+                            <button class="main__btnCloseSession" id="btnCloseSession">Cerrar sesión</button>
+                            </form>
+            </aside>
+      
+        <div class="main__section">
+            <section class="main__headers">
+                <figure>
+                    <img class="main__image" src="../../images/juan david.jpg" alt="foto de perfil">
+                </figure>
+                <button class="main__buttonIcons"> <img class="main__icon" src="../../images/icons/icons/search.svg" alt=""></button>
+            </section>
+            <div class="main__containerChats" id="main__containerChats">
+                <p class="main__textChat">Hola</p>
+                
+            </div>
+           
+            <form  type="submit" id="container__principalForm" class="main__formIcons">
+                <img class="main__icons" src="../../images/icons/icons/smile.svg" alt="">
+                <img class="main__icons" src="../../images/icons/icons/paperclip.svg" alt="">
+                <input id="main__iconsinput" class="main__iconsInput" type="text" placeholder="Escriba su mensaje">
+                <button  class="main__buttonIcons"> <img class="main__icons" src="../../images/icons/icons/mic.svg" alt=""></button>
+            </form>
+        </div>
+
+
+    </main>
+
+</body>
+<script src="../scripts/home.js" type="module"></script>
+</html>

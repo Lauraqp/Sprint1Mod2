@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js" integrity="sha512-26uCxGyoPL1nESYXHQ+KUmm3Maml7MEQNWU8hIt1hJaZa5KQAQ5ehBqK6eydcCOh6YAuZjV3augxu/5tY4fsgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <title>Login</title>
+</head>
+    <body class="body__register">
+     <main class="main__login">
+         <h1>Iniciar Sesión</h1>
+    <form id="form__login" class="form__login">
+        <input type="number" id="cellphone" class="form__number" placeholder="Ingrese su número de celular" required>
+        <input type="password" id="password" class="form__passWord" placeholder="Ingrese su contraseña" required>
+        <button type="submit" id="button__login" class="form__button">Ingresar</button>
+        <span class="form__span">No tienes una cuenta? <a class="form__link" href="/src/pages/register.html">Regístrate</a></span>
+    </form>
+   </main>
+  <script src="./src/scripts/main.js" type="module"></script>
+</body>
+</html>

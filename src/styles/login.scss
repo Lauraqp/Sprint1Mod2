@@ -1,0 +1,132 @@
+
+
+$button-color:#2ecc71;
+$hover-color: #ededed;
+$font-size-body:16px;
+
+@function size($sz) {
+    @return $sz*$font-size-body;
+}
+
+@mixin padding($t) {
+    padding: $t*1px $t*4px;
+}
+
+@mixin button($t,$button-color, $hover-color) {
+    @include padding($t);
+    background-color: $button-color;
+    color: $hover-color;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 100%;
+    height: 2vw;
+ 
+    &:hover{
+     background-color: $hover-color;
+     color: $button-color;
+    }
+ }
+ @mixin links ($l){
+    text-decoration: none;
+    color: #2ecc71;
+    cursor: pointer;
+    &:hover{
+    color: rebeccapurple;
+    }
+ }
+
+
+.body__register{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.main__login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+
+    &__name{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center
+    }
+    &__cellphone{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center
+    }
+    &__password{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center
+    }
+    &__button{
+        @include button(5, $button-color, $hover-color);
+    }
+    &__link{
+       @include links(10)
+    }
+    &__number{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center;
+    }
+    &__passWord{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center
+    }
+    &__button{
+        @include button(5, $button-color, $hover-color);
+    }
+    &__link{
+       @include links(10);
+       font-size: size(1.2);
+    }
+    &__span{
+        font-size: size(1.2);
+    }
+    &__url{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center;
+    }
+    &__phrase{
+        width: 15vw;
+        height: 2vw;
+        font-size: $font-size-body;
+        text-align: center;
+    }
+   
+}
+
+.form__login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+}
